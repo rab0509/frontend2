@@ -1,0 +1,21 @@
+{
+  "name": "frontend",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Rob Bogan <boganrab@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/rab0509/frontend2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.100.1"
+  }
+}
