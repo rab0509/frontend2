@@ -40,7 +40,9 @@ app.get("*", function(req, res) {
   res.sendFile(path.resolve(__dirname + "/public/views/404.html"));
 });
 
+/*
 app.listen(port, function() {
   console.log("listening on port " + ".");
   opn("http://localhost:" + port);
 });
+*/
