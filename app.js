@@ -2,8 +2,10 @@ var express = require("express");
 var path = require("path");
 var opn = require("opn");
 
+const http = require('http');
+
 const app = express();
-const port = 8080;
+//const port = 8080;
 
 app.use(express.static(path.resolve(__dirname + "/public")));
 
@@ -40,9 +42,14 @@ app.get("*", function(req, res) {
   res.sendFile(path.resolve(__dirname + "/public/views/404.html"));
 });
 
-
+/*
 app.listen(port, function() {
   console.log("listening on port " + ".");
   opn("https://frontend-rab.herokuapp.com/:" + port);
 });
-
+*/
+// Server Setup
+const port = process.env.PORT || 8081;
+const server = http.createServer(app);
+server.listen(port);
+console.log('Server listening on:', port);
